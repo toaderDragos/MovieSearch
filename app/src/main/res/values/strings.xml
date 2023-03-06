@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">MovieSearch</string>
+    <string name="welcome_to_movie_search">Welcome to Movie Search!</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="log_in">Log In</string>
+    <string name="start">Start</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_your_details">Enter your details</string>
+    <string name="title">Title</string>
+    <string name="score">Score</string>
+    <string name="terminator_dark_fate">The eternal sunshine of the Spotless Mind</string>
+    <string name="genres">Genres </string>
+    <string name="find_a_movie">Find movies!</string>
+    <string name="search">search</string>
+    <string name="movie_detail_title">Movie Title</string>
+    <string name="date_premiered">Date Premiered</string>
+    <string name="summary">Summary: The eternal sunshine of the Spotless Mind The eternal sunshine of the Spotless Mind The eternal sunshine of the Spotless Mind</string>
+    <string name="genre">Comedy, Action</string>
+    <string name="genre1">Genres: </string>
+    <string name="english">English</string>
+    <string name="language">Language:</string>
+    <string name="gb">GB</string>
+    <string name="imdb">IMDB</string>
+    <string name="official_site">Official Site</string>
+    <string name="channel_4">Channel 4</string>
+    <string name="thetvdb">thetvdb</string>
+    <string name="network">Network:</string>
+    <string name="unlock_a_world_of_cinema">Unlock a World of Cinema</string>
+    <string name="showing_results_for">Showing results for: </string>
+    <string name="no_summary">No summary</string>
+    <string name="query">query</string>
+    <string name="linkno">There is no link for this movie!</string>
+</resources>

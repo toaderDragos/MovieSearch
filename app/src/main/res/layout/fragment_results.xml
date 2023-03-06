@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.dragos.moviesearch.viewmodel.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/deepBackground">
+
+        <EditText
+            android:id="@+id/searchMovie"
+            style="@style/editTextStyle"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="17dp"
+            android:background="@drawable/round_corners_shape_empty"
+            android:hint="@string/search"
+            android:textColor="@color/whiteText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/whatHasBeenFound"
+            style="@style/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:text="@string/showing_results_for"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/star"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchMovie" />
+
+        <TextView
+            android:id="@+id/query"
+            style="@style/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="query"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/star"
+            app:layout_constraintStart_toEndOf="@+id/whatHasBeenFound"
+            app:layout_constraintTop_toBottomOf="@+id/searchMovie" />
+
+        <ImageView
+            android:id="@+id/magnifierButton2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/searchMovie"
+            app:layout_constraintStart_toEndOf="@+id/searchMovie"
+            app:layout_constraintTop_toTopOf="@+id/searchMovie"
+            app:srcCompat="@drawable/baseline_search_24" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/resultsRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:lineSpacingExtra="5dp"
+            android:padding="4dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/whatHasBeenFound"
+            app:spanCount="2" />
+
+        <ImageView
+            android:id="@+id/status_image"
+            android:adjustViewBounds="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:movieApiStatus="@{viewModel.status}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

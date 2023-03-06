@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/deepBackground">
+
+    <TextView
+        android:id="@+id/message"
+        android:text="@string/find_a_movie"
+        app:layout_constraintBottom_toTopOf="@+id/searchMovie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92"
+        style="@style/title_style" />
+
+    <EditText
+        android:id="@+id/searchMovie"
+        style="@style/editTextStyle"
+        android:background="@drawable/round_corners_shape_empty"
+        android:hint="@string/search"
+        android:textColor="@color/whiteText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <ImageView
+        android:id="@+id/magnifierButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/searchMovie"
+        app:layout_constraintStart_toEndOf="@+id/searchMovie"
+        app:layout_constraintTop_toTopOf="@+id/searchMovie"
+        app:srcCompat="@drawable/baseline_search_24" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:background="@color/deepBackground"
+        app:layout_constraintEnd_toStartOf="@+id/searchMovie"
+        app:layout_constraintTop_toBottomOf="@+id/searchMovie"
+        app:srcCompat="@drawable/baseline_info_24" />
+
+    <TextView
+        android:id="@+id/infoMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoeuil"
+        android:layout_marginStart="10dp"
+        android:text="Movies will be found even if your query contains small typos"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="@+id/imageButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </layout>
