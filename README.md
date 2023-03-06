@@ -1,5 +1,6 @@
 # MovieSearch
 A simple movie app that uses TvMaze API.
+
 Written in Android with Kotlin in MVVM architecture.
 It has an initial animation on the welcome screen, then we enter a search page.
 The search results can be found on the Results page.
