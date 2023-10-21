@@ -73,7 +73,7 @@ class DetailFragment : Fragment() {
             binding.detailSummary.text = getString(R.string.no_summary)
         }
 
-        // Some results are incomplete (for example the network branch(with the country name inside) is non- existent in some entries)
+        // Some results are incomplete (for example the network branch(with the country name inside) is non- existent in some entries - so we have to put replacements instead
         if (movie.show.network != null) {
             binding.detailNetwork.text = movie.show.network.name
             if (movie.show.network.country.name != null) {
@@ -101,7 +101,6 @@ class DetailFragment : Fragment() {
     }
 
     fun linkButtons(button: Button, link: String?) {
-
         button.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 if (link != null) {
